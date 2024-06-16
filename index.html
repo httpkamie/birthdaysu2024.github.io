@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Hari Lahir Suhayl!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.7);
+            color: #f5f5f5;
+            text-align: center;
+            position: relative;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+
+        .container {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.4); /* More transparency */
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20vh;
+            max-height: 60vh;
+            overflow-y: auto;
+            width: 80%;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3); /* More transparent scroll bar */
+            border-radius: 10px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1); /* Transparent scroll bar track */
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ffcccb;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            color: #ffd700;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #f5f5f5;
+        }
+
+        .wishes {
+            font-size: 1.1em;
+            color: #ffdab9; /* PeachPuff color for better aesthetic */
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #87ceeb; /* SkyBlue color */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #4682b4; /* SteelBlue color */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="birthdaysu">
+        <source src="video/birthdaysu.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="container">
+        <h1>Happy Birthday, Suhayl!</h1>
+        <h2>🎉🎂🎈</h2>
+        <p>Click the button below to see the wishes ehehe :p </p>
+        <button class="button" onclick="showWishes()">click here</button>
+        <div id="wishes" class="hidden">
+            <p class="wishes">
+                "Happiest wishes to you Suhayl, knowing you ngl there are a few sweet and bitterness in it, I am sorry if I had any wrongdoings towards you. You have been someone so great in my life not just as a friend, but kalau dalam Inside Out tu, kau dah macam bola2 core memory aku.
+            <br> You've been there not just in my Kpop phase, but also when I went to my first ever concert and also during the nights out I did that I just don't do it anymore these days. Neitherless, aku tahu kau kuat, kadang tu aku jealous, I wish to be as strong as you, walaupun diri kau je tahu kau macam mana but I know you are such a strong man.</br>
+            <br> Tanpa kau sedar kan Su, you have put standards towards your girl-friends on how they should be treated by their 'man' for their bare minimum. I would always observe how you treat women and girls around you and I wish you nothing but the best life and a partner who would appreciate you as much as you appreciate people around you.</br>
+            <br> I want to talk more tapi nanti birthday seterusnya takde idea pulak kan so biarlah sampai sini haha. To many more adventures and horror games and maybe to our own mansions (kita kan nak kaya haha)."</br>
+            </p>
+        </div>
+        <div class="footer">
+            <p>From your friend,</p>
+            <p>Kamie / Mia</p>
+        </div>
+    </div>
+
+    <script>
+        function showWishes() {
+            var wishesDiv = document.getElementById("wishes");
+            if (wishesDiv.classList.contains("hidden")) {
+                wishesDiv.classList.remove("hidden");
+            } else {
+                wishesDiv.classList.add("hidden");
+            }
+        }
+
+        // Slow down the background video more
+        document.getElementById('birthdaysu').playbackRate = 0.5;
+    </script>
+</body>
+</html>
